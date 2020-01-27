@@ -1,0 +1,123 @@
+:root{
+  --primary-color: #17a2b8;
+  --dark-color: #343a40;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #f5f5f5;
+  color: #4e4e4e;
+}
+
+.x-large{
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* ========================= NavBar ============================= */
+.navar{
+  background-color: #fff;
+  padding: 0.7rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px var(--primary-color);
+  background-color: var(--dark-color);
+}
+
+.fixed-it{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  display: flex;
+}
+
+.navar a{
+  color: #fff;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+}
+
+.navbar-title {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #0078ff;
+}
+
+.navbar-title:hover{
+  text-decoration: none;
+}
+
+.navar-nav{
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.navar-nav>li{
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+/* ======================= Home =========================== */
+.home-sect{
+  position: relative;
+  background-image: url("images/joker.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.home-inner{
+  color: #fff;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+/* ========================= About Us =================== */
+
+section{
+  display: block;
+}
+
+/* ========================= Mobile Screen =============== */
+
+@media(max-width: 700px){
+.x-large{
+  font-size: 3rem;
+}
+
+.navar{
+  display: block;
+  text-align: center;
+}
+
+.navbar-title{
+  margin-bottom: 1rem;
+}
+
+.navar-nav{
+  text-align: center;
+  justify-content: center;
+}
+
+}
