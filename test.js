@@ -31,7 +31,7 @@ function checkEmailValidation(input) {
 // Checking the subject length
 function checkSubjectLength(input, max) {
   if (input.value.length > max) {
-    showError(input, `Subject length should be less than ${max} characters`);
+    showError(input, `Maximum of ${max} characters is valid`);
   }
 }
 
