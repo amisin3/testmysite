@@ -163,14 +163,14 @@ a:focus {
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+/* .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
-}
+} */
 
 /* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -187,6 +187,33 @@ a:focus {
   background-color: #fff;
   color: #000;
   transform: rotateY(180deg);
+}
+
+.flip-card-back {
+  display: none;
+}
+
+.employee-pic {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  bottom: 1rem;
+  right: 1rem;
+  /* height: inherit; */
+}
+
+.employee-name {
+  padding-left: 4rem;
+  padding-top: 2.2rem;
+}
+
+.employee-role {
+  padding-left: 4rem;
+  padding-top: 0.4rem;
+}
+
+.employee-description {
+  display: none;
 }
 
 /* ======================== Contact US =================== */
