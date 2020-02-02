@@ -267,3 +267,9 @@ form button {
   display: inline;
   margin-right: 1rem;
 }
+
+/* ======================== SERVICES ============================= */
+.justify-text {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
