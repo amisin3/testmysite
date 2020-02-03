@@ -59,3 +59,30 @@ form.addEventListener("submit", function(e) {
   checkEmailValidation(email);
   checkSubjectLength(subject, 30);
 });
+
+//  Going from bottom to top of the page button
+
+window.onload = function() {
+  var windowHeight = document.body.clientHeight;
+  var docHeight;
+  docHeight = getDocHeight();
+  var scrollTop = document.body.scrollTop;
+  var trackLength = docHeight - windowHeight;
+  console.log(trackLength);
+  if (trackLength == 0) {
+    document.getElementById("bottomtotop").style.display = "block";
+  } else {
+    // document.getElementById("bottomtotop").style.display = "none";
+  }
+};
+function getDocHeight() {
+  var D = document;
+  return Math.max(
+    D.body.scrollHeight,
+    D.documentElement.scrollHeight,
+    D.body.offsetHeight,
+    D.documentElement.offsetHeight,
+    D.body.clientHeight,
+    D.documentElement.clientHeight
+  );
+}
