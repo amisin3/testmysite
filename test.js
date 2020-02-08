@@ -58,6 +58,14 @@ form.addEventListener("submit", function(e) {
   checkRequired([name, email, subject, message]);
   checkEmailValidation(email);
   checkSubjectLength(subject, 30);
+
+  Email.send({
+    SecureToken: "53e530f5-e8b0-4be4-93cb-c05b1f807826",
+    To: "amit1291997@gmail.com",
+    From: "amit1291997@gmail.com",
+    Subject: "This is the subject",
+    Body: "And this is the body"
+  }).then(message => alert(message));
 });
 
 //  Going from bottom to top of the page button
