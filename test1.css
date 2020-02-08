@@ -247,6 +247,10 @@ a:focus {
   display: none;
 }
 
+.gotopBtn {
+  display: none;
+}
+
 .form-container {
   font-family: "Open Sans", sans-serif;
   padding: 0.5rem 0.5rem;
