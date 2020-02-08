@@ -58,13 +58,15 @@ form.addEventListener("submit", function(e) {
   checkRequired([name, email, subject, message]);
   checkEmailValidation(email);
   checkSubjectLength(subject, 30);
+  var bdy = name.value + email.value + subject.value + message.value;
+  console.log(bdy);
 
   Email.send({
     SecureToken: "53e530f5-e8b0-4be4-93cb-c05b1f807826",
     To: "amit1291997@gmail.com",
-    From: email.value,
+    From: "amit1291997@gmail.com",
     Subject: subject.value,
-    Body: message.value
+    Body: bdy
   }).then(message => alert(message));
 });
 
