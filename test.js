@@ -62,9 +62,9 @@ form.addEventListener("submit", function(e) {
   Email.send({
     SecureToken: "53e530f5-e8b0-4be4-93cb-c05b1f807826",
     To: "amit1291997@gmail.com",
-    From: "amit1291997@gmail.com",
-    Subject: "This is the subject",
-    Body: "And this is the body"
+    From: email.value,
+    Subject: subject.value,
+    Body: message.value
   }).then(message => alert(message));
 });
 
