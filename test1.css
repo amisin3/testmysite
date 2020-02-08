@@ -26,6 +26,10 @@ body {
   font-size: 3rem;
 }
 
+.italic-text {
+  font-style: italic;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -203,17 +207,26 @@ a:focus {
 }
 
 .employee-name {
-  padding-left: 4rem;
-  padding-top: 2.2rem;
+  position: absolute;
+  left: 3.5rem;
+  top: 3rem;
+  font-size: 1.2rem;
 }
 
 .employee-role {
-  padding-left: 4rem;
-  padding-top: 0.4rem;
+  position: absolute;
+  left: 3.5rem;
+  top: 5rem;
+  font-size: 0.8rem;
 }
 
 .employee-description {
   display: none;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ======================== Contact US =================== */
@@ -307,6 +320,12 @@ form button {
 .justify-text {
   text-align: justify;
   text-justify: inter-ideograph;
+}
+
+/* ========================= On Going Projects =================== */
+
+.img-size {
+  padding: 0.9rem;
 }
 
 /* ================== Media Queries For Ipad =====================*/
@@ -443,6 +462,15 @@ form button {
     display: none;
   }
 
+  .table-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tab1 {
+    margin-right: 0.9rem;
+  }
+
   /* ================== Contact Us ================================== */
   .mobile-form {
     display: none;
@@ -484,6 +512,24 @@ form button {
 
   .socials ul li {
     display: inline-block;
+  }
+
+  /* ========================= On Going Projects =================== */
+
+  /* width: 69.4rem; height: 38rem */
+
+  .position-image {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .img-size {
+    width: 22rem;
+    height: 12rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    padding-left: 0.9rem;
   }
 
   /*========
