@@ -58,7 +58,15 @@ form.addEventListener("submit", function(e) {
   checkRequired([name, email, subject, message]);
   checkEmailValidation(email);
   checkSubjectLength(subject, 30);
-  var bdy = name.value + email.value + subject.value + message.value;
+  var bdy =
+    "Name: " +
+    name.value +
+    ", Email: " +
+    email.value +
+    ", Subject: " +
+    subject.value +
+    ", Message: " +
+    message.value;
   console.log(bdy);
 
   Email.send({
