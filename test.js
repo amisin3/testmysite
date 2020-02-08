@@ -86,3 +86,16 @@ form.addEventListener("submit", function(e) {
 //     D.documentElement.clientHeight
 //   );
 // }
+
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+
+var prevScrollPos = window.pageYOffset;
+window.onscroll = function() {
+  currScrollPos = window.pageYOffset;
+  if (this.prevScrollPos > currScrollPos) {
+    document.getElementById("mainNav").style.top = "0";
+  } else {
+    document.getElementById("mainNav").style.top = "-5rem";
+  }
+  this.prevScrollPos = currScrollPos;
+};
