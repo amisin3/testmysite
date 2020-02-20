@@ -5,7 +5,7 @@
   --dark-color: #343a40;
   --success-color: #2ecc71;
   --error-color: #e74c3c;
-  --temporary-color: rgba(20.4%, 22.7%, 25.1%, 0.5);
+  --temporary-color: rgba(20.4%, 22.7%, 25.1%, 0.8);
 }
 
 * {
@@ -68,6 +68,11 @@ a:focus {
   z-index: 1030;
 }
 
+.fixed-it > h1 {
+  margin-bottom: 0rem;
+  padding-top: 0.5rem;
+}
+
 .company-logo {
   width: 14rem;
 }
@@ -79,9 +84,8 @@ a:focus {
 }
 
 .navbar-title {
-  margin-bottom: 1rem;
   text-decoration: none;
-  color: #0078ff;
+  background-color: white;
 }
 
 .navar-list-container {
@@ -104,7 +108,7 @@ a:focus {
 /* ======================= Home Section ========================== */
 .home-sect {
   position: relative;
-  background-image: url("images/joker.jpg");
+  background-image: url("images/cover-pic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -150,9 +154,10 @@ a:focus {
   position: relative;
   background-color: #fff;
   margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   z-index: 2;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  border: thick solid #17a2b8;
 }
 
 .about-content {
@@ -160,6 +165,10 @@ a:focus {
 }
 
 /* ================ Meet Our Team ======================== */
+
+.pc-site {
+  display: none;
+}
 
 .flip-card {
   background-color: transparent;
@@ -375,6 +384,20 @@ form button {
   padding: 0.9rem;
 }
 
+.position-image {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+}
+
+.img-size {
+  width: 20rem;
+  height: 12rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+  padding-left: 1.9rem;
+}
+
 /* ================== Media Queries For Ipad =====================*/
 
 @media only screen and (min-width: 768px) {
@@ -432,6 +455,143 @@ form button {
   }
 
   /* ================ Meet Our Team ======================== */
+
+  .mobile-site {
+    display: none;
+  }
+
+  .pc-site {
+    display: block;
+  }
+
+  /* New-look for meet our team */
+
+  .coll-4 {
+    flex: 0 0 23%;
+    max-width: 23%;
+    margin-right: 0.5rem;
+    margin-left: 0.8rem;
+    height: 16rem;
+  }
+
+  .Team-col-1 {
+    margin-top: 0;
+    /* border-right: thick solid #e5e5e5;
+    border-width: 0.2rem;
+    padding-right: 2rem; */
+  }
+
+  /* .Team-col-2 {
+    border-right: thick solid #e5e5e5;
+    border-width: 0.2rem;
+    padding-right: 2rem;
+  } */
+
+  /* .Team-col-3 {
+    border-right: thick solid #e5e5e5;
+    border-width: 0.2rem;
+    padding-right: 2rem;
+  } */
+
+  .emp-pic {
+    position: relative;
+    margin: auto;
+  }
+
+  .image-emp {
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.3rem;
+    border-color: #17a2b8;
+  }
+
+  .emp-name {
+    position: relative;
+    top: 3rem;
+  }
+
+  .emp-role,
+  .emp-detail {
+    position: relative;
+    top: 3rem;
+  }
+
+  .btn-read-more {
+    position: relative;
+    top: 3rem;
+  }
+
+  .Team-col-2 {
+    margin-top: 14rem;
+  }
+
+  .Team-col-4 {
+    margin-top: 14rem;
+  }
+
+  .emp-pic {
+    width: 8rem;
+    height: 5rem;
+  }
+
+  .more-details {
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    display: none;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 100000;
+  }
+
+  /* .more-details .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  } */
+
+  .modal-content {
+    background-color: white;
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-color: #2ecc71;
+    border-width: 0.15rem;
+    transform: translate(-50%, -50%);
+  }
+
+  .popupCloseButton {
+    background-color: #fff;
+    color: #3498db;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+  }
+  .popupCloseButton:hover {
+    background-color: #ccc;
+  }
+
+  .modal-container {
+    padding-top: 1rem;
+  }
+
+  /* This was the previous look */
 
   .add1 {
     display: flex;
@@ -553,6 +713,8 @@ form button {
   .socials ul {
     list-style: none;
     margin-bottom: 0;
+    display: flex;
+    margin-left: 4rem;
   }
 
   .socials .icon-circle {
@@ -569,6 +731,7 @@ form button {
 
   .socials ul li {
     display: inline-block;
+    flex: 0 0 20%;
   }
 
   /* ============================== Services ========================= */
@@ -588,6 +751,65 @@ form button {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .component:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+  }
+
+  .component:hover:before {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+  }
+
+  .component h2 {
+    position: absolute;
+    left: 2.5rem;
+    top: 1.5rem;
+    font-size: 2.5em;
+    font-weight: 800;
+    z-index: 1;
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+
+  .component:hover h2 {
+    opacity: 1;
+    color: #fff;
+    transform: translateY(-25px);
+  }
+
+  .component h3 {
+    position: relative;
+    font-size: 1.5em;
+    z-index: 2;
+    color: #333;
+    transition: 0.5s;
+    top: 1.7rem;
+  }
+
+  .component:hover h3,
+  .component:hover ul {
+    color: #fff;
+  }
+
+  .component ul {
+    position: relative;
+    z-index: 2;
+    color: #555;
+    transition: 0.5s;
+    top: 2rem;
   }
 
   .children {

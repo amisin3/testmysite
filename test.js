@@ -4,6 +4,12 @@ const email = document.getElementById("email");
 const subject = document.getElementById("subject");
 const message = document.getElementById("message");
 
+const web_form = document.getElementById("web-form");
+const web_name = document.getElementById("web-name");
+const web_email = document.getElementById("web-email");
+const web_subject = document.getElementById("web-subject");
+const web_message = document.getElementById("web-message");
+
 // Show error message
 function showError(input, message) {
   const inputParent = input.parentElement;
@@ -58,6 +64,7 @@ form.addEventListener("submit", function(e) {
   checkRequired([name, email, subject, message]);
   checkEmailValidation(email);
   checkSubjectLength(subject, 30);
+
   var bdy =
     "Name: " +
     name.value +
@@ -69,13 +76,44 @@ form.addEventListener("submit", function(e) {
     message.value;
   console.log(bdy);
 
-  Email.send({
-    SecureToken: "53e530f5-e8b0-4be4-93cb-c05b1f807826",
-    To: "amit1291997@gmail.com",
-    From: "amit1291997@gmail.com",
-    Subject: subject.value,
-    Body: bdy
-  }).then(message => alert(message));
+  if (subject.value !== "") {
+    Email.send({
+      SecureToken: "53e530f5-e8b0-4be4-93cb-c05b1f807826",
+      To: "amit1291997@gmail.com",
+      From: "amit1291997@gmail.com",
+      Subject: subject.value,
+      Body: bdy
+    }).then(message => alert(message));
+  }
+});
+
+web_form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  checkRequired([web_name, web_email, web_subject, web_message]);
+  checkEmailValidation(web_email);
+  checkSubjectLength(web_subject, 30);
+
+  var bdy =
+    "Name: " +
+    web_name.value +
+    ", Email: " +
+    web_email.value +
+    ", Subject: " +
+    web_subject.value +
+    ", Message: " +
+    web_message.value;
+  console.log(bdy);
+
+  if (web_subject.value !== "") {
+    Email.send({
+      SecureToken: "53e530f5-e8b0-4be4-93cb-c05b1f807826",
+      To: "amit1291997@gmail.com",
+      From: "amit1291997@gmail.com",
+      Subject: web_subject.value,
+      Body: bdy
+    }).then(message => alert(message));
+  }
 });
 
 //  Going from bottom to top of the page button
@@ -113,7 +151,63 @@ window.onscroll = function() {
   if (this.prevScrollPos > currScrollPos) {
     document.getElementById("mainNav").style.top = "0";
   } else {
-    document.getElementById("mainNav").style.top = "-5rem";
+    document.getElementById("mainNav").style.top = "0";
   }
   this.prevScrollPos = currScrollPos;
 };
+
+// MEET OUR TEAM POP-UP
+
+window.onload = function() {
+  document.getElementById("read-more1").onclick = function() {
+    document.getElementById("more-details").style.display = "block";
+    document.getElementById("image-emp").src = "images/batman-300x300.jpg";
+    document.getElementById("emp-name").innerHTML =
+      "<h2><u>Nitesh Chhawchria</u></h2>";
+    document.getElementById("emp-detail").innerHTML =
+      "<p>Chartered Accountant with over 6 years of professional experience. Over the past 2 years they have developed specialty into Media Consultancy services.</p>";
+  };
+
+  document.getElementById("read-more2").onclick = function() {
+    document.getElementById("more-details").style.display = "block";
+    document.getElementById("image-emp").src = "images/batman-300x300.jpg";
+    document.getElementById("emp-name").innerHTML =
+      "<h2><u>Sorabh Chhawchria</u></h2>";
+    document.getElementById("emp-detail").innerHTML =
+      "<p>Chartered Accountant with over 6 years of professional experience. Over the past 2 years they have developed specialty into Media Consultancy services.</p>";
+  };
+
+  document.getElementById("read-more3").onclick = function() {
+    document.getElementById("more-details").style.display = "block";
+    document.getElementById("image-emp").src = "images/batman-300x300.jpg";
+    document.getElementById("emp-name").innerHTML =
+      "<h2><u>Renu Singh</u></h2>";
+    document.getElementById("emp-detail").innerHTML =
+      "<p>Renu is MBA in Finance. She has over six year of experience in audits & assurance at Haribhakti and transfer pricing services at KMPG. Her passion to be with media industry drove her into audits for Shows and Web-Series. She has been with our team for over a year and handles audits of multiple shows including movie</p>";
+  };
+
+  document.getElementById("read-more4").onclick = function() {
+    document.getElementById("more-details").style.display = "block";
+    document.getElementById("image-emp").src = "images/batman-300x300.jpg";
+    document.getElementById("emp-name").innerHTML =
+      "<h2><u>Vijay Sonawale</u></h2>";
+    document.getElementById("emp-detail").innerHTML =
+      "<p>Vijay have over five years of experience in audits of web-series and shows. He remains face for dealing with vendors and union matters where audit team has rejected invoices. Also he has neck of getting the most economical deal for production house. He has worked as Audit Executive with Beyond Dreams and Writer Galaxy before joining Honestus.</p>";
+  };
+
+  document.getElementById("popupCloseButton").onclick = function() {
+    document.getElementById("more-details").style.display = "none";
+  };
+};
+
+// Mobile-Site Hamburger
+var flag = true;
+function toggleSideBar() {
+  if (flag) {
+    document.getElementById("sidebar").style = "left:0;";
+    flag = false;
+  } else {
+    document.getElementById("sidebar").style = "left:-200px;";
+    flag = true;
+  }
+}

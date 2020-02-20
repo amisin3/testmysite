@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="test1.css">
+    <link rel="stylesheet" href="hamburger.css">
   </head>
   <body>
   <nav class="navar fixed-it" id="mainNav">
     <h1>
     <a href="#" class="navbar-title"><img class="company-logo" src="images/Company-Logo/Logo Honestus.png" alt="images"></a>
     </h1>
-    <div class="container navar-list-container">
+      <div class="container navar-list-container pc-site">
         <ul class="navar-nav container">
           <li class="nav-home"><a href="#home" class="link-home">Home</a></li>
           <li class="nav-about"><a href="#about" class="link-about">About</a></li>
@@ -21,7 +22,24 @@
           <li class="nav-work"><a href="#clients" class="link-work">Clients</a></li>
           <li class="nav-contact"><a href="#contact" class="link-contact">Contact</a></li>
         </ul>
-    </div>
+      </div>
+      <div class="sidebar mobile-site" id="sidebar">
+        
+        <div class="toggle-btn menu-wrap" id="toggle-btn" onclick="toggleSideBar()">
+          <input type="checkbox" class="toggler">
+          <div class="hamburger">
+            <div></div>
+          </div>
+        </div>
+        <ul>
+          <input type="checkbox" class="toggler"><li><a href="#home" class="activa" onclick="toggleSideBar()">Home</a></li>
+          <input type="checkbox" class="toggler"><li><a href="#about" class="activa" onclick="toggleSideBar()">About</a></li>
+          <input type="checkbox" class="toggler"><li><a href="#services" class="activa" onclick="toggleSideBar()">Services</a></li>
+          <input type="checkbox" class="toggler"><li><a href="#clients" class="activa" onclick="toggleSideBar()">Clients</a></li>
+          <input type="checkbox" class="toggler"><li><a href="#contact" class="activa" onclick="toggleSideBar()">Contact</a></li>
+        </ul>
+      
+      </div>
   </nav>
   <div id="home" class="home-sect">
     <div class="home-inner">
@@ -41,13 +59,12 @@
       <div class="box-shadow-full">
         <p class="about-content">
           <ul style="list-style: none;">
-            <li style="background-color:#d9534f; font-weight:bold;">Honestus is a multi-disciplinary firm providing innovative and effective services and solutions to media houses to cost control
+            <li style="font-weight:bold;"><i class="fas fa-hand-point-right"></i>Honestus is a multi-disciplinary firm providing innovative and effective services and solutions to media houses to cost control</li>
+            <li style="font-weight: bold;"><i class="fas fa-hand-point-right"></i>Honestus is promoted by young and professional Chartered Accountants having true blend of energetic approach, youthful wisdom and experienced thought process.
             </li>
-            <li style="background-color: #5bc0de; font-weight: bold;">Honestus is promoted by young and professional Chartered Accountants having true blend of energetic approach, youthful wisdom and experienced thought process.
+            <li style="font-weight: bold;"><i class="fas fa-hand-point-right"></i>Each activity is executed towards adding value to clients’ business in global arena using indepth knowledge and expertise in all segments of profession.
             </li>
-            <li style="background-color: #5cb85c; font-weight: bold;">Each activity is executed towards adding value to clients’ business in global arena using indepth knowledge and expertise in all segments of profession.
-            </li>
-            <li style="background-color: #428bca; font-weight: bold;">Honestus is empowered by professional skills coupled with modern business approach.
+            <li style="font-weight: bold;"><i class="fas fa-hand-point-right"></i>Honestus is empowered by professional skills coupled with modern business approach.
             </li>
           </ul>
         </p>
@@ -57,7 +74,7 @@
       <h1 class="x-large center-text">Meet Our Team</h1>
       <div class="underline"></div>
     </div>
-    <div class="container">
+    <div class="container mobile-site">
     <div class="add1">
     <div class="col-md-3">
         <div class="flip-card">
@@ -66,16 +83,6 @@
               <img src="images/batman-300x300.jpg" class="employee-pic" alt="Avatar" >
               <h5 class="employee-name">Nitesh Chhawchharia</h5>
               <p class="employee-role italic-text">Chartered Accountant</p>
-              <!-- <p class="employee-description"></p> -->
-            </div>
-            <div class="flip-card-back">
-              <div class="back-role" style="background-color: #1828B4; height: 5rem; margin: auto;">
-                <h2 style="font-weight: bolder; height: 100%; padding-top: 1.2rem;">ROLE</h2>
-              </div>
-              <p style="margin:3.7rem 0;"> Chartered Accountant with over 6 years of professional experience. Over the past 2 years they have developed speciality into Media Consultancy Services.</p>
-              <div class="back-experience" style="background-color: #1828B4; height: 5rem; margin-bottom:0rem;">
-                <h2 style="font-weight: bolder; height: 100%;">Experience: 6 years</h2>
-              </div>
             </div>
           </div>
         </div>
@@ -87,16 +94,6 @@
             <img src="images/batman-300x300.jpg" class="employee-pic" alt="Avatar" >
             <h5 class="employee-name">Sohrab Chhawchharia</h5>
             <p class="employee-role italic-text">Chartered Accountant</p>
-            <!-- <p class="employee-description"></p> -->
-          </div>
-          <div class="flip-card-back">
-            <div class="back-role" style="background-color: #1828B4; height: 5rem; margin: auto;">
-              <h2 style="font-weight: bolder; height: 100%; padding-top: 1.2rem;">ROLE</h2>
-            </div>
-            <p style="margin:3.7rem 0;"> Chartered Accountant with over 6 years of professional experience. Over the past 2 years they have developed speciality into Media Consultancy Services.</p>
-            <div class="back-experience" style="background-color: #1828B4; height: 5rem; margin-bottom:0rem;">
-              <h2 style="font-weight: bolder; height: 100%;">Experience: 6 years</h2>
-            </div>
           </div>
         </div>
       </div>
@@ -108,16 +105,6 @@
             <img src="images/batman-300x300.jpg" class="employee-pic" alt="Avatar">
             <h3 class="employee-name">Renu Singh</h3>
             <p class="employee-role italic-text">Senior Executive In Backend Team</p>
-            <!-- <p class="employee-description"></p> -->
-          </div>
-          <div class="flip-card-back">
-            <div class="back-role" style="background-color: #1828B4; height: 4rem; margin: auto;">
-              <h2 style="font-weight: bolder; height: 100%; padding-top: 0.8rem;">ROLE</h2>
-            </div>
-            <p>Renu is MBA in Finance. She has over six year of experience in audits & assurance at Haribhakti and transfer pricing services at KMPG. Her passion to be with media industry drove her into audits for Shows and Web-Series. She has been with our team for over a year and handles audits of multiple shows including movie</p>
-            <div class="back-experience" style="background-color: #1828B4; height: 5rem; margin-bottom:0rem;">
-              <h2 style="font-weight: bolder; height: 100%;">Experience: 6 years</h2>
-            </div>
           </div>
         </div>
       </div>
@@ -129,27 +116,98 @@
             <img src="images/batman-300x300.jpg" class="employee-pic" alt="Avatar" >
             <h3 class="employee-name">Vijay Sonawale</h3>
             <p class="employee-role italic-text">Senior Executive In Backend Team</p>
-            <!-- <p class="employee-description">Lorem Ipsum is simply dummy text of the printing.</p> -->
-          </div>
-          <div class="flip-card-back">
-            <div class="back-role" style="background-color: #1828B4; height: 2.3rem; margin: auto;">
-              <h2 style="font-weight: bolder; height: 100%;">Role</h2>
-            </div>
-            <p>Vijay have over five years of experience in audits of web-series and shows. He remains face for dealing with vendors and union matters where audit team has rejected invoices. Also he has neck of getting the most economical deal for production house. He has worked as Audit Executive with Beyond Dreams and Writer Galaxy before joining Honestus.</p>
-            <div class="back-experience" style="background-color: #1828B4; height: 5rem; margin-bottom:0rem;">
-              <h2 style="font-weight: bolder; height: 100%;">Experience: 5 years</h2>
-            </div>
           </div>
         </div>
       </div>
     </div>
     </div>
     </div>
-    <div class="container">
+    <div class="container pc-site">
+      <div class="box-shadow-full">
+        <div class="add1">
+          <div class="Team-col-1 coll-4 center-text">
+              <div class="emp-pic">
+                <img src="images/batman-300x300.jpg" alt="image" class="image-emp">
+              </div>
+              <div class="emp-name">
+                <h5>Nitesh Chhawchharia</h5>
+              </div>
+              <div class="emp-role">
+                <p>Chartered Accountant</p>
+              </div>
+              <div class="btn-read-more">
+                <button type="button" class="btn btn-outline-primary" id="read-more1">Read More</button>
+              </div>
+              <div class="more-details" id="more-details">
+                <div class="modal-content">
+                  <div class="popupCloseButton" id="popupCloseButton">&times</div>
+                  <div class="modal-container">
+                    <div class="emp-pic" id="emp-pic">
+                      <img src="images/batman-300x300.jpg" alt="image" id="image-emp" class="image-emp">
+                    </div>
+                    <div class="emp-name" id="emp-name">
+                      <h5>Nitesh Chhawchharia</h5>
+                    </div>
+                    <div class="emp-detail" id="emp-detail">
+                      <p>Chartered Accountant with over 6 years of professional experience. Over the past 2 years they have developed specialty into Media Consultancy services.</p>
+                    </div>
+                </div>
+                </div>
+              </div>
+          </div>
+          <div class="Team-col-2 coll-4 center-text">
+            <div class="emp-pic">
+              <img src="images/batman-300x300.jpg" alt="image" class="image-emp">
+            </div>
+            <div class="emp-name">
+              <h5>Sorabh Chhawchharia</h5>
+            </div>
+            <div class="emp-role">
+              <p>Chartered Accountant</p>
+            </div>
+            <div class="btn-read-more">
+              <button type="button" class="btn btn-outline-primary"  id="read-more2">Read More</button>
+            </div>
+          </div>
+          <div class="Team-col-3 coll-4 center-text">
+            <div class="emp-pic">
+              <img src="images/batman-300x300.jpg" alt="image" class="image-emp">
+            </div>
+            <div class="emp-name">
+              <h5>Renu Singh</h5>
+            </div>
+            <div class="emp-role">
+              <p>Senior Executive In Backend Team</p>
+            </div>
+            <div class="btn-read-more">
+              <button type="button" class="btn btn-outline-primary" id="read-more3">Read More</button>
+            </div>
+          </div>
+          <div class="Team-col-4 coll-4 center-text">
+            <div class="emp-pic">
+              <img src="images/batman-300x300.jpg" alt="image" class="image-emp">
+            </div>
+            <div class="emp-name">
+              <h5>Vijay Sonawala</h5>
+            </div>
+            <div class="emp-role">
+              <p>Senior Executive In Backend Team</p>
+            </div>
+            <div class="btn-read-more">
+              <button type="button" class="btn btn-outline-primary"  id="read-more4">Read More</button>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <h3 class="center-text">Team of <strong>6 BACK-END</strong> and <strong>15 FRONT-END AUDITORS</strong></h3>
+        <p class="x-medium center-text"> <em>The cost reports and controls established in production of content ensures accurate tracking of cost. Our auditors with relevant experience also ensure no wastages are done in production of content</em></p>
+      </div>
+    </div>
+    <div class="container mobile-site">
     <div class="box-shadow-full">
       <h3 class="center-text">Team of <strong>6 BACK-END</strong> and <strong>15 FRONT-END AUDITORS</strong></h3>
       <p class="x-medium center-text"> <em>The cost reports and controls established in production of content ensures accurate tracking of cost. Our auditors with relevant experience also ensure no wastages are done in production of content</em></p>
-      <div class="table-container">
+      <!-- <div class="table-container">
         <table class="table table-dark tab1">
           <thead>
             <tr>
@@ -228,7 +286,7 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> -->
     </div>
   </div>
   </div>
@@ -238,129 +296,61 @@
         <h1 class="x-large center-text">Services</h1>
         <p class="x-medium center-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         <div class="underline"></div>
-      </div>
+      </div>      
       <div class="container">
-        <div class="parent-container">
-          <div class="child-container">
+        <div class="add1">
+          <div class="col-md-6">
             <div class="box-shadow-full component">
-              <div class="first-child children">
-                <div class="icon-of-child"><i class="fas fa-dollar-sign"></i></div>
-                <div class="service-title">
-                  <h2>Audits and Controls</h2>
-                </div>
-              </div>
-              <div class="second-child children">
-                <div class="second-second">
-                  <ul>
-                    <li>
-                      We do concurrent audits for web-series, Events, Daily Soaps
-                      and Movie
-                    </li>
-                    <li>
-                      Presence of Audit team on Set ensure proper recording of
-                      Talents, Production Staff, Workers, Equipment‘s, Purchases and
-                      Hiring
-                    </li>
-                    <li>
-                      Daily MIS or Daily Productivity Reports ensures all the MIS
-                      are accurate and available in Soft form thereby eliminating
-                      the need to open daily Dockets
-                    </li>
-                    <li>
-                      Cost reports once or twice a week ensure the producer are well
-                      aware of financial boundaries
-                    </li>
-                    <li>
-                      Comparison of Actual cost to Budgets allows producers to have
-                      a sense of actual spending and giving a direction to
-                      production team
-                    </li>
-                    <li>
-                      Vendor Audits ensures the bills submitted by vendors are duly
-                      checked before payments.
-                    </li>
-                    <li>
-                      Also we have ongoing discussion with production, existing
-                      vendors and management for all the matter related to cost
-                    </li>
-                  </ul>
-                </div>
+              <h2>01</h2>
+              <h3><u> Audits and Cost control </u></h3>
+              <ul style="list-style: none;">
+                <li><i class="fas fa-hand-point-right"></i>We do concurrent audits for web-series, Events, Daily Soaps and Movie</li>
+                <li><i class="fas fa-hand-point-right"></i>Presence of Audit team on Set ensure proper recording of Talents, Production Staff, Workers, Equipment‘s, Purchases and Hiring </li>
+                <li><i class="fas fa-hand-point-right"></i>Daily MIS or Daily Productivity Reports ensures all the MIS are accurate and available in Soft form thereby eliminating the need to open daily Dockets </li>
+                <li><i class="fas fa-hand-point-right"></i> Cost reports once or twice a week ensure the producer are well aware of financial boundaries </li>
+                <li><i class="fas fa-hand-point-right"></i>Comparison of Actual cost to Budgets allows producers to have a sense of actual spending and giving a direction to production team </li>
+                <li><i class="fas fa-hand-point-right"></i>Vendor Audits ensures the bills submitted by vendors are duly checked before payments. </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="box-shadow-full component">
+              <h2>02</h2>
+                <h3><u>Accountancy services for production house</u></h3>
+                <ul style="list-style: none;">
+                  <li><i class="fas fa-hand-point-right"></i>Quite often it is observed that smaller production houses produce only one or two web-series a year.</li>
+                  <li><i class="fas fa-hand-point-right"></i>It is essential to note that such production house hire accountant for an entire year.</li>
+                  <li><i class="fas fa-hand-point-right"></i>Our Accountancy services billings are on project basis and thus the producer pays only till the project is live.</li>
+                  <li><i class="fas fa-hand-point-right"></i>Also the experience team of accountants ensures accounting is done on timely basis including compliances like GST filing.</li>
+                </ul>
+            </div>
+          </div>
+          <div class="add1">
+            <div class="col-md-6">
+              <div class="box-shadow-full component">
+                <h2>03</h2>
+                <h3><u> Vendor Negotiations</u></h3>
+                <ul style="list-style: none;">
+                  <li><i class="fas fa-hand-point-right"></i>Our Database have wide variety of locations List, equipment material and purchase cost which are used in daily shoots.</li>
+                  <li><i class="fas fa-hand-point-right"></i>The database ensure producers do not overpay for purchase or hiring.</li>
+                </ul>
               </div>
             </div>
-            <div class="box-shadow-full component">
-              <div class="first-child children">
-                <div class="icon-of-child"><i class="fas fa-dollar-sign"></i></div>
-                <div class="service-title">
-                  <h2>Budget Preparation</h2>
-                </div>
-              </div>
-              <div class="second-child children">
-                <div class="second-second">
-                  <ul>
-                    <li>
-                      We prepare a detail report with respect every line item
-                      required in production of Web-Series or any type of Content.
-                      Budget preparation is a crucial activity and ensures financial
-                      expectations and limitations are Set first.
-                    </li>
-                    <li>
-                      We also do Budget verification on behalf of producers to
-                      ensure accurate target is set for a producer by an investor or
-                      financer.
-                    </li>
-                  </ul>
-                </div>
+            <div class="col-md-6">
+              <div class="box-shadow-full component">
+              <h2>04</h2>
+              <h3><u> Budget Preparation </u></h3>
+              <ul style="list-style: none;">
+                <li><i class="fas fa-hand-point-right"></i>We prepare a detail report with respect every line item required in production of Web-Series or any type of Content.</li>
+                <li><i class="fas fa-hand-point-right"></i>Budget preparation is a crucial activity and ensures financial expectations and limitations are Set first.</li>
+                <li><i class="fas fa-hand-point-right"></i>We also do Budget verification on behalf of producers to ensure accurate target is set for a producer by an investor or financer.</li>
+              </ul>
               </div>
             </div>
           </div>
-          <div class="child-container">
-            <div class="box-shadow-full component">
-              <div class="first-child children">
-                <div class="icon-of-child"><i class="fas fa-dollar-sign"></i></div>
-                <div class="service-title">
-                  <h2>Vendor Negotiations</h2>
-                </div>
-              </div>
-              <div class="second-child children">
-                <div class="second-second">
-                  <ul>
-                    <li>
-                      Our Database have wide variety of locations List, equipment
-                      material and purchase cost which are used in daily shoots. The
-                      database ensure producers do not overpay for purchase or
-                      hiring.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="box-shadow-full component">
-              <div class="first-child children">
-                <div class="icon-of-child"><i class="fas fa-dollar-sign"></i></div>
-                <div class="service-title">
-                  <h2>Accountancy services for production house</h2>
-                </div>
-              </div>
-              <div class="second-child children">
-                <div class="second-second">
-                  <ul>
-                    <li>
-                      Quite often it is observed that smaller production houses
-                      produce only one or two web-series a year. It is essential to
-                      note that such production house hire accountant for an entire
-                      year.
-                    </li>
-                    <li>
-                      Our Accountancy services billings are on project basis and
-                      thus the producer pays only till the project is live. Also the
-                      experience team of accountants ensures accounting is done on
-                      timely basis including compliances like GST filing.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+        </div>
+        </div>
         </div>
       </div>
     </section>
@@ -491,25 +481,25 @@
               <h1 class="x-large center-text">Contact Us</h1>
               <div class="underline"></div>
               <div class="form-container slide-down">
-                <form class="form" id="form">
+                <form class="form" id="web-form">
                   <div class="form-control1">
                     <label for="name">Your Name</label>
-                    <input type="text" id="name" placeholder="Enter your name">
+                    <input type="text" id="web-name" placeholder="Enter your name">
                     <small>Error message</small>
                   </div>
-                  <div class="form-control1 ">
+                  <div class="form-control1">
                     <label for="email">Your email</label>
-                    <input type="text" id="email" placeholder="Enter your email">
+                    <input type="text" id="web-email" placeholder="Enter your email">
                     <small>Error message</small>
                   </div>
                   <div class="form-control1">
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" placeholder="Enter your subject">
+                    <input type="text" id="web-subject" placeholder="Enter your subject">
                     <small>Error message</small>
                   </div>
                   <div class="form-control1">
                     <label for="message">Your message</label>
-                    <input type="text" id="message" placeholder="Enter your message">
+                    <input type="text" id="web-message" placeholder="Enter your message">
                     <small>Error message</small>
                   </div>
                   <button class="submit">Send Message</button>
