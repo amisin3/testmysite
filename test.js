@@ -211,3 +211,9 @@ function toggleSideBar() {
     flag = true;
   }
 }
+
+// var shiftWindow = function() {
+//   scrollBy(0, -10);
+// };
+// if (location.hash) shiftWindow();
+// window.addEventListener("hashchange", shiftWindow);
