@@ -20,8 +20,8 @@
 
 .sidebar .toggle-btn {
   position: absolute;
-  left: 230px;
-  top: 20px;
+  left: 13.0625rem;
+  top: 0.5rem;
 }
 
 .toggle-btn {
@@ -54,9 +54,9 @@
   top: 0;
   left: 0;
   z-index: 1;
-  width: 60px;
-  height: 60px;
-  padding: 1rem;
+  width: 3rem;
+  height: 2rem;
+  padding: 1.2rem 0.8rem;
   background: var(--primary-color);
   display: flex;
   align-items: center;
