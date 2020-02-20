@@ -380,10 +380,6 @@ form button {
 
 /* ========================= On Going Projects =================== */
 
-.img-size {
-  padding: 0.9rem;
-}
-
 .position-image {
   display: flex;
   flex-direction: column;
@@ -391,11 +387,11 @@ form button {
 }
 
 .img-size {
-  width: 20rem;
+  /* width: 20rem; */
   height: 12rem;
   padding-top: 0.9rem;
   padding-bottom: 0.9rem;
-  padding-left: 1.9rem;
+  /* padding-left: 1.9rem; */
 }
 
 /* ================== Media Queries For Ipad =====================*/
