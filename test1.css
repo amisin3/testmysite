@@ -31,7 +31,16 @@ body {
 }
 
 .x-large {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+.home-inner > .x-large {
+  /* position: relative;
+  top: -100px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2); */
+  display: none;
 }
 
 .italic-text {
@@ -113,7 +122,7 @@ a:focus {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  background-position: center center;
+  background-position: 87% 70%;
   background-attachment: fixed;
 }
 
@@ -173,9 +182,9 @@ a:focus {
 
 .flip-card {
   background-color: transparent;
-  width: 18rem;
+  width: 100%;
   height: 10rem;
-  margin: 1rem auto;
+  margin: 1.5rem 0;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -237,7 +246,7 @@ a:focus {
   position: absolute;
   left: 3.5rem;
   top: 5rem;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
 }
 
 .employee-description {
@@ -449,6 +458,18 @@ form button {
 
   .navar-nav li a {
     font-size: 1rem;
+  }
+
+  /* ======================= Home Section ========================== */
+  .home-sect {
+    background-position: center center;
+  }
+
+  .home-inner > .x-large {
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-weight: bolder;
+    display: block;
   }
 
   /* ================ Meet Our Team ======================== */
