@@ -163,7 +163,7 @@ window.onload = function() {
     document.getElementById("more-details").style.display = "block";
     document.getElementById("image-emp").src = "images/batman-300x300.jpg";
     document.getElementById("emp-name").innerHTML =
-      "<h2><u>Nitesh Chhawchria</u></h2>";
+      "<h2><u>Nitesh Chhawchharia</u></h2>";
     document.getElementById("emp-detail").innerHTML =
       "<p>Chartered Accountant with over 6 years of professional experience. Over the past 2 years they have developed specialty into Media Consultancy services.</p>";
   };
@@ -172,7 +172,7 @@ window.onload = function() {
     document.getElementById("more-details").style.display = "block";
     document.getElementById("image-emp").src = "images/batman-300x300.jpg";
     document.getElementById("emp-name").innerHTML =
-      "<h2><u>Sorabh Chhawchria</u></h2>";
+      "<h2><u>Sorabh Chhawchharia</u></h2>";
     document.getElementById("emp-detail").innerHTML =
       "<p>Chartered Accountant with over 6 years of professional experience. Over the past 2 years they have developed specialty into Media Consultancy services.</p>";
   };
@@ -183,7 +183,7 @@ window.onload = function() {
     document.getElementById("emp-name").innerHTML =
       "<h2><u>Renu Singh</u></h2>";
     document.getElementById("emp-detail").innerHTML =
-      "<p>Renu is MBA in Finance. She has over six year of experience in audits & assurance at Haribhakti and transfer pricing services at KMPG. Her passion to be with media industry drove her into audits for Shows and Web-Series. She has been with our team for over a year and handles audits of multiple shows including movie</p>";
+      "<p>Renu is MBA in Finance. She has over six year of experience in audits & assurance at Haribhakti and transfer pricing services at KMPG. Her passion to be with media industry drove her into audits for Shows and Web-Series. She has been with our team for over a year and handles audits of multiple shows including movie.</p>";
   };
 
   document.getElementById("read-more4").onclick = function() {
